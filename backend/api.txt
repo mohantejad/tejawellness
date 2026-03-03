@@ -1,0 +1,20 @@
+Core JWT (cookies):
+
+POST /auth/jwt/create/ (login, sets access + refresh cookies)
+POST /auth/jwt/refresh/ (refresh cookies)
+POST /auth/jwt/verify/ (verifies access cookie)
+POST /auth/logout/ (clears cookies)
+Djoser user flow:
+
+POST /auth/users/ (register)
+POST /auth/users/activation/ (activate)
+POST /auth/users/resend_activation/ (resend)
+POST /auth/users/reset_password/
+POST /auth/users/reset_password_confirm/
+POST /auth/users/set_password/
+POST /auth/users/set_username/
+GET /auth/users/me/
+Google OAuth:
+
+GET /auth/o/google-oauth2/?redirect_uri=... (get auth URL)
+POST /auth/o/google-oauth2/?code=...&state=...&redirect_uri=... (login)

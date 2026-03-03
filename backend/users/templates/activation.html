@@ -1,0 +1,39 @@
+{% load i18n %}
+
+{# 
+  Subject block for the activation email.
+  This will be used as the email subject line.
+#}
+{% block subject %}
+{% blocktrans %}Account activation on Teja Wellness{% endblocktrans %}
+{% endblock subject %}
+
+{# 
+  Text body block for plain-text email clients.
+  Includes activation instructions and a direct link.
+#}
+{% block text_body %}
+{% blocktrans %}You are receiving this email because you registered for an Teja Wellness account and need to complete your activation process.{% endblocktrans %}
+
+{% trans 'Please click the link below to activate your Teja Wellness account:' %}
+https://{{ domain }}/{{ url|safe }}
+
+{% trans 'Thank you for choosing Teja Wellness!' %}
+
+{% blocktrans %}The Teja Wellness Team{% endblocktrans %}
+{% endblock text_body %}
+
+{# 
+  HTML body block for rich email clients.
+  Provides a styled activation message and link.
+#}
+{% block html_body %}
+<p>{% blocktrans %}You are receiving this email because you registered for an Teja Wellness account and need to complete your activation process.{% endblocktrans %}</p>
+
+<p>{% trans 'Please click the link below to activate your Teja Wellness account:' %}</p>
+<p><a href='https://{{ domain }}/{{ url|safe }}'>Activate your Teja Wellness account</a></p>
+
+<p>{% trans 'Thank you for choosing Teja Wellness!' %}</p>
+
+<p>{% blocktrans %}The Teja Wellness Team{% endblocktrans %}</p>
+{% endblock html_body %}

@@ -1,0 +1,20 @@
+{% load i18n %}
+
+{% block subject %}
+{% blocktrans %}Your Teja Wellness email was changed{% endblocktrans %}
+{% endblock subject %}
+
+{% block text_body %}
+{% blocktrans %}This is a confirmation that your Teja Wellness email address has been changed.{% endblocktrans %}
+
+{% trans 'If you did not perform this change, please contact support immediately.' %}
+
+{% blocktrans %}The Teja Wellness Team{% endblocktrans %}
+{% endblock text_body %}
+
+{% block html_body %}
+<p>{% blocktrans %}This is a confirmation that your Teja Wellness email address has been changed.{% endblocktrans %}</p>
+
+<p>{% trans 'If you did not perform this change, please contact support immediately.' %}</p>
+<p>{% blocktrans %}The Teja Wellness Team{% endblocktrans %}</p>
+{% endblock html_body %}

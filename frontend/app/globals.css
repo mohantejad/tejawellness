@@ -1,0 +1,78 @@
+@config "../tailwind.config.ts";
+@import "tailwindcss";
+
+
+:root {
+  --bg: 60 30% 98%;
+  --fg: 160 15% 12%;
+  --card: 0 0% 100%;
+  --border: 160 10% 85%;
+  --primary: 145 45% 35%;
+  --primary-foreground: 60 30% 98%;
+  --accent: 38 90% 55%;
+  --accent-foreground: 160 15% 12%;
+  --muted: 160 12% 95%;
+  --muted-foreground: 160 10% 35%;
+  --ring: 145 45% 35%;
+  --surface: 145 20% 97%;
+}
+
+body {
+  background: hsl(var(--bg));
+  color: hsl(var(--fg));
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  background-image:
+    radial-gradient(800px 400px at 10% -10%, hsl(var(--accent) / 0.15), transparent 60%),
+    radial-gradient(900px 500px at 90% -20%, hsl(var(--primary) / 0.12), transparent 60%),
+    linear-gradient(180deg, hsl(var(--bg)), hsl(var(--surface)));
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+.container-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.container-header {
+  max-width: 1100px;
+  margin: auto;
+  /* padding-top: 2rem; */
+}
+
+
+.card-soft {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(20, 40, 30, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+

@@ -1,0 +1,389 @@
+[
+  {
+    "name": "Weight Loss",
+    "slug": "weight-loss",
+    "description": "Sustainable fat loss with smart nutrition and movement.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Fat Loss",
+    "slug": "fat-loss",
+    "description": "Reduce body fat while preserving lean mass.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Lean Body / Recomposition",
+    "slug": "lean-body-recomposition",
+    "description": "Build muscle and burn fat at the same time.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Healthy Weight Gain",
+    "slug": "healthy-weight-gain",
+    "description": "Add weight with nutrient‑dense, balanced meals.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Muscle Gain",
+    "slug": "muscle-gain",
+    "description": "Increase muscle size and strength with proper fuel.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Toning / Definition",
+    "slug": "toning-definition",
+    "description": "Improve muscle definition and body shape.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Strength & Power",
+    "slug": "strength-power",
+    "description": "Maximize strength output and overall power.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Athletic Performance",
+    "slug": "athletic-performance",
+    "description": "Improve speed, agility, and explosive performance.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Endurance / Stamina",
+    "slug": "endurance-stamina",
+    "description": "Boost cardiovascular fitness and stamina.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Speed & Agility",
+    "slug": "speed-agility",
+    "description": "Increase quickness and reaction ability.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Balance & Coordination",
+    "slug": "balance-coordination",
+    "description": "Improve stability, coordination, and body control.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Core Strength",
+    "slug": "core-strength",
+    "description": "Build a strong core for posture and performance.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Functional Fitness",
+    "slug": "functional-fitness",
+    "description": "Train for real‑life movement and resilience.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Mobility & Flexibility",
+    "slug": "mobility-flexibility",
+    "description": "Increase range of motion and movement quality.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Posture & Alignment",
+    "slug": "posture-alignment",
+    "description": "Improve spinal alignment and posture.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Recovery & Injury Prevention",
+    "slug": "recovery-injury-prevention",
+    "description": "Recover faster and reduce injury risk.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Joint Health",
+    "slug": "joint-health",
+    "description": "Support joint strength and comfort.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Back Pain Relief",
+    "slug": "back-pain-relief",
+    "description": "Reduce back pain with targeted habits and movement.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Energy Boost",
+    "slug": "energy-boost",
+    "description": "Increase daily energy and reduce fatigue.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Stress Relief",
+    "slug": "stress-relief",
+    "description": "Calm the nervous system and improve resilience.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Better Sleep",
+    "slug": "better-sleep",
+    "description": "Improve sleep quality and recovery.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Focus & Mental Clarity",
+    "slug": "focus-mental-clarity",
+    "description": "Support cognitive focus and clarity.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Heart Health",
+    "slug": "heart-health",
+    "description": "Support cardiovascular health and circulation.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Blood Pressure Support",
+    "slug": "blood-pressure-support",
+    "description": "Promote healthy blood pressure levels.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Circulation Support",
+    "slug": "circulation-support",
+    "description": "Improve blood flow and vascular function.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Metabolic Health",
+    "slug": "metabolic-health",
+    "description": "Optimize metabolism and energy balance.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Blood Sugar Balance",
+    "slug": "blood-sugar-balance",
+    "description": "Support stable glucose levels.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Insulin Sensitivity",
+    "slug": "insulin-sensitivity",
+    "description": "Improve insulin response and metabolic health.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Hormone Balance",
+    "slug": "hormone-balance",
+    "description": "Support healthy hormone regulation.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Thyroid Support",
+    "slug": "thyroid-support",
+    "description": "Nutritional support for thyroid health.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Gut Health",
+    "slug": "gut-health",
+    "description": "Improve digestion and microbiome health.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Digestion Support",
+    "slug": "digestion-support",
+    "description": "Support smoother digestion and nutrient absorption.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Bloating Relief",
+    "slug": "bloating-relief",
+    "description": "Reduce bloating and discomfort.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Immunity",
+    "slug": "immunity",
+    "description": "Strengthen immune defense and resilience.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Anti‑Inflammation",
+    "slug": "anti-inflammation",
+    "description": "Reduce chronic inflammation with diet and lifestyle.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Seasonal Wellness",
+    "slug": "seasonal-wellness",
+    "description": "Support wellness through seasonal changes.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Skin Care",
+    "slug": "skin-care",
+    "description": "Nourish skin with targeted nutrients.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Hair Care",
+    "slug": "hair-care",
+    "description": "Support hair strength and growth.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Nail Health",
+    "slug": "nail-health",
+    "description": "Strengthen nails with nutrition and care.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+
+  {
+    "name": "Healthy Aging / Longevity",
+    "slug": "healthy-aging-longevity",
+    "description": "Support long‑term wellness and vitality.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Detox & Clean Living",
+    "slug": "detox-clean-living",
+    "description": "Reduce toxic load and improve wellness habits.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  },
+  {
+    "name": "Healthy Habits",
+    "slug": "healthy-habits",
+    "description": "Build sustainable daily routines.",
+    "image_recipes": "",
+    "image_products": "",
+    "image_workouts": "",
+    "image_articles": ""
+  }
+]
