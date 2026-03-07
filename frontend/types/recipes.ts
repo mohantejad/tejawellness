@@ -69,6 +69,7 @@ export type RecipeCardData = {
   title: string;
   calories?: number;
   protein?: number;
+  meal_type?: string;
   average_rating?: number;
   rating_count?: number;
   like_count?: number;

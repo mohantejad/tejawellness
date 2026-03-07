@@ -3,18 +3,25 @@
 
 
 :root {
-  --bg: 60 30% 98%;
-  --fg: 160 15% 12%;
+  /* Warm cream background */
+  --bg: 30 40% 97%;
+  /* Rich dark plum text */
+  --fg: 330 20% 14%;
+  /* Pure white cards */
   --card: 0 0% 100%;
-  --border: 160 10% 85%;
-  --primary: 145 45% 35%;
-  --primary-foreground: 60 30% 98%;
-  --accent: 38 90% 55%;
-  --accent-foreground: 160 15% 12%;
-  --muted: 160 12% 95%;
-  --muted-foreground: 160 10% 35%;
-  --ring: 145 45% 35%;
-  --surface: 145 20% 97%;
+  /* Pale rose border */
+  --border: 340 18% 87%;
+  /* Deep rose primary */
+  --primary: 340 45% 42%;
+  --primary-foreground: 30 40% 97%;
+  /* Warm gold accent */
+  --accent: 36 80% 58%;
+  --accent-foreground: 330 20% 14%;
+  /* Soft blush muted */
+  --muted: 340 20% 94%;
+  --muted-foreground: 330 12% 40%;
+  --ring: 340 45% 42%;
+  --surface: 340 25% 98%;
 }
 
 body {
@@ -23,13 +30,16 @@ body {
   font-family: var(--font-sans);
   letter-spacing: -0.01em;
   background-image:
-    radial-gradient(800px 400px at 10% -10%, hsl(var(--accent) / 0.15), transparent 60%),
-    radial-gradient(900px 500px at 90% -20%, hsl(var(--primary) / 0.12), transparent 60%),
-    linear-gradient(180deg, hsl(var(--bg)), hsl(var(--surface)));
+    radial-gradient(900px 500px at 5% -5%, hsl(var(--primary) / 0.10), transparent 55%),
+    radial-gradient(700px 400px at 95% -10%, hsl(var(--accent) / 0.13), transparent 55%),
+    radial-gradient(600px 600px at 50% 100%, hsl(var(--primary) / 0.06), transparent 65%),
+    linear-gradient(175deg, hsl(var(--bg)), hsl(var(--surface)));
   background-attachment: fixed;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-serif);
   letter-spacing: -0.02em;
 }
@@ -39,40 +49,118 @@ a {
   text-decoration: none;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 .container-page {
-  max-width: 1100px;
+  max-width: 1500px;
   margin: auto;
   padding: 2rem;
 }
 
 .container-header {
-  max-width: 1100px;
+  max-width: 1500px;
   margin: auto;
-  /* padding-top: 2rem; */
 }
 
-
+/* ── Card & Glass ───────────────────────────────────────────────────────── */
 .card-soft {
   background: hsl(var(--card));
   border: 1px solid hsl(var(--border));
   border-radius: 1.25rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px hsl(var(--primary) / 0.08);
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(20, 40, 30, 0.08);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid hsl(var(--border) / 0.6);
+  backdrop-filter: blur(14px);
 }
 
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+/* ── Hero gradient band ─────────────────────────────────────────────────── */
+.gradient-hero {
+  background: linear-gradient(135deg,
+      hsl(var(--primary) / 0.12) 0%,
+      hsl(var(--accent) / 0.10) 50%,
+      hsl(var(--surface)) 100%);
+}
 
+/* ── Buttons ────────────────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: 9999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  opacity: 1;
+  transform: none;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: 9999px;
+  border: 1.5px solid hsl(var(--primary));
+  color: hsl(var(--primary));
+  font-weight: 600;
+  font-size: 0.875rem;
+  background: transparent;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-outline:hover {
+  background: hsl(var(--muted));
+  transform: translateY(-1px);
+}
+
+/* ── Badge / pill ───────────────────────────────────────────────────────── */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: hsl(var(--muted));
+  color: hsl(var(--primary));
+  border: 1px solid hsl(var(--border));
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────── */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -12,6 +12,7 @@ export type MealPlanItem = {
     primary_image?: string | null;
     calories?: number;
     protein?: number;
+    prep_time?: number;
   };
 };
 

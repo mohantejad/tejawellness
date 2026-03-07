@@ -6,7 +6,7 @@ from .serializers import GoalSerializer
 
 
 class GoalPagination(PageNumberPagination):
-    page_size = 8
+    page_size = 3
 
 
 class GoalViewSet(viewsets.ReadOnlyModelViewSet):
@@ -41,3 +41,4 @@ class GoalViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = GoalSerializer
     permission_classes = [permissions.AllowAny]
     pagination_class = GoalPagination
+    lookup_field = "slug"

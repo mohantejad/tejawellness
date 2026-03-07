@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import Ingredient, IngredientMedia, IngredientBenefit, IngredientWarning
+from .models import (
+    Ingredient,
+    IngredientMedia,
+    IngredientVitamin,
+    IngredientMineral,
+    IngredientMicronutrient,
+    IngredientGoal,
+)
 
 
 class IngredientMediaInline(admin.TabularInline):
@@ -7,22 +14,36 @@ class IngredientMediaInline(admin.TabularInline):
     extra = 1
 
 
-class IngredientBenefitInline(admin.TabularInline):
-    model = IngredientBenefit
+class IngredientVitaminInline(admin.TabularInline):
+    model = IngredientVitamin
     extra = 2
 
 
-class IngredientWarningInline(admin.TabularInline):
-    model = IngredientWarning
+class IngredientMineralInline(admin.TabularInline):
+    model = IngredientMineral
+    extra = 2
+
+
+class IngredientMicronutrientInline(admin.TabularInline):
+    model = IngredientMicronutrient
+    extra = 2
+
+
+class IngredientGoalInline(admin.TabularInline):
+    model = IngredientGoal
     extra = 1
+
 
 @admin.register(Ingredient)
 class IngredientAdmin(admin.ModelAdmin):
-    list_display = ("name", "calories", "protein", "carbs", "fat")
-    search_fields = ("name",)
-    inlines = [IngredientMediaInline, IngredientBenefitInline, IngredientWarningInline]
-
-
-# admin.site.register(IngredientMedia)
-# admin.site.register(IngredientBenefit)
-# admin.site.register(IngredientWarning)
+    list_display  = ('name', 'ingredient_type', 'calories', 'protein', 'carbs', 'fat')
+    list_filter   = ('ingredient_type',)
+    search_fields = ('name', 'description')
+    prepopulated_fields = {'slug': ('name',)}
+    inlines = [
+        IngredientVitaminInline,
+        IngredientMineralInline,
+        IngredientMicronutrientInline,
+        IngredientMediaInline,
+        IngredientGoalInline,
+    ]

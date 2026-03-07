@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import ProductCard from "@/components/products/ProductCard";
 import ProductFilters from "@/components/products/ProductFilter";
 import { fetchProductsByGoal } from "@/api/products";
@@ -18,6 +20,7 @@ export default async function GoalProductsPage({
   };
 }) {
   const { slug } = await params;
+  const title = slug.replace("-", " ");
   const page = searchParams.page ? Number(searchParams.page) : 1;
   const filters = {
     search: searchParams.search,
@@ -45,48 +48,66 @@ export default async function GoalProductsPage({
   };
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold capitalize">{slug.replace("-", " ")} Products</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <main className="container-page py-12 space-y-12 animate-in fade-in duration-1000">
+      {/* Editorial Header */}
+      <div className="max-w-4xl space-y-4">
+        <div className="flex items-center gap-3">
+          <Link href={`/goals/${slug}`} className="text-[10px] font-bold text-primary uppercase tracking-[0.4em] hover:opacity-70 transition-opacity">
+            {title} Sanctuary
+          </Link>
+          <div className="h-px w-8 bg-primary/30" />
+          <span className="text-[10px] font-bold text-mutedForeground uppercase tracking-[0.4em]">The Apothecary</span>
+        </div>
+        <h1 className="text-5xl md:text-7xl font-serif font-bold text-fg tracking-tight leading-tight capitalize">
+          {title} Curation
+        </h1>
+        <p className="text-xl text-mutedForeground font-serif italic leading-relaxed max-w-2xl">
+          "A bespoke collection of science-backed formulations and botanical elixirs, curated for {title} excellence."
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <aside className="lg:col-span-4">
-          <div className="sticky top-24">
+          <div className="sticky top-28">
             <ProductFilters />
           </div>
         </aside>
-        <section className="lg:col-span-8">
-          {products.length === 0 && (
-            <div className="text-mutedForeground">No products found for this goal.</div>
+        <section className="lg:col-span-8 space-y-10">
+          {products.length === 0 ? (
+            <div className="h-[40vh] flex flex-col items-center justify-center text-center space-y-4">
+              <p className="text-mutedForeground font-serif italic">No apothecary products matched your refined search for {title}.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {products.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {products.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
-          </div>
-
           {totalPages > 1 && (
-            <div className="flex items-center justify-between text-sm mt-6">
-              <div className="text-mutedForeground">
-                Page {currentPage} of {totalPages}
+            <div className="pt-12 border-t border-primary/10 flex items-center justify-between">
+              <div className="text-[10px] font-bold text-mutedForeground uppercase tracking-widest">
+                Edition {currentPage} of {totalPages}
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4">
                 <a
-                  className={`px-3 py-2 rounded-lg border border-border ${currentPage <= 1 ? "pointer-events-none opacity-50" : ""}`}
+                  className={`h-12 w-12 rounded-full border border-border flex items-center justify-center text-mutedForeground hover:border-primary hover:text-primary transition-all duration-300 ${currentPage <= 1 ? "pointer-events-none opacity-20" : ""}`}
                   href={buildPageLink(currentPage - 1)}
                 >
-                  Prev
+                  <ChevronLeft size={18} />
                 </a>
                 <a
-                  className={`px-3 py-2 rounded-lg border border-border ${currentPage >= totalPages ? "pointer-events-none opacity-50" : ""}`}
+                  className={`h-12 w-12 rounded-full border border-border flex items-center justify-center text-mutedForeground hover:border-primary hover:text-primary transition-all duration-300 ${currentPage >= totalPages ? "pointer-events-none opacity-20" : ""}`}
                   href={buildPageLink(currentPage + 1)}
                 >
-                  Next
+                  <ChevronRight size={18} />
                 </a>
               </div>
             </div>
           )}
         </section>
       </div>
-    </div>
+    </main>
   );
 }

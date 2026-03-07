@@ -3,23 +3,24 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Toaster } from "sonner";
-import { Fraunces, Manrope } from "next/font/google";
+import { Fraunces, DM_Sans } from "next/font/google";
 import AuthBootstrap from "@/components/auth/AuthBootstrap";
 import ReduxProvider from "@/components/ReduxProvider";
 import ChatWidget from "@/components/ai/ChatWidget";
 
 
 const serif = Fraunces({ subsets: ["latin"], variable: "--font-serif" });
-const sans = Manrope({ subsets: ["latin"], variable: "--font-sans" });
+const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  title: "Teja Wellness",
-  description: "An AI wellness guide for nutrition, beauty, and fitness",
+  title: "Teja Wellness — Skin & Hair Care Nutrition",
+  description:
+    "Discover the best ingredients, science-backed recipes, and curated products for radiant skin and healthy hair.",
 };
 
 export const dynamic = "force-dynamic";
 
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body className="min-h-screen flex flex-col">

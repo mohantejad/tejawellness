@@ -18,10 +18,18 @@ export default async function MealPlansPage({ searchParams }: { searchParams: Se
   const plans: MealPlan[] = await fetchMealPlans(searchParams);
 
   return (
-    <main className="container-page space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold">Meal Plans</h1>
-        <p className="text-sm text-mutedForeground">Structured plans for your goals.</p>
+    <main className="container-page space-y-12 py-10 animate-in fade-in duration-1000">
+      <div className="max-w-3xl space-y-4">
+        <div className="flex items-center gap-3">
+          <span className="text-[10px] font-bold text-primary uppercase tracking-[0.4em]">The Regimen</span>
+          <div className="h-px w-8 bg-primary/30" />
+        </div>
+        <h1 className="text-5xl md:text-7xl font-serif font-bold text-fg tracking-tight leading-tight">
+          Bespoke Protocols
+        </h1>
+        <p className="text-xl text-mutedForeground font-serif italic leading-relaxed max-w-2xl">
+          "Science-backed dietary paths curated for targeted cellular rejuvenation and beauty optimization."
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

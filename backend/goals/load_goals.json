@@ -1,53 +1,548 @@
 [
-  {"model":"goals.goal","pk":1,"fields":{"name":"Weight Loss","slug":"weight-loss","description":"Sustainable fat loss with smart nutrition and movement.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":2,"fields":{"name":"Fat Loss","slug":"fat-loss","description":"Reduce body fat while preserving lean mass.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":3,"fields":{"name":"Lean Body / Recomposition","slug":"lean-body-recomposition","description":"Build muscle and burn fat at the same time.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":4,"fields":{"name":"Healthy Weight Gain","slug":"healthy-weight-gain","description":"Add weight with nutrient‑dense, balanced meals.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":5,"fields":{"name":"Muscle Gain","slug":"muscle-gain","description":"Increase muscle size and strength with proper fuel.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":6,"fields":{"name":"Toning / Definition","slug":"toning-definition","description":"Improve muscle definition and body shape.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":7,"fields":{"name":"Strength & Power","slug":"strength-power","description":"Maximize strength output and overall power.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":8,"fields":{"name":"Athletic Performance","slug":"athletic-performance","description":"Improve speed, agility, and explosive performance.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":9,"fields":{"name":"Endurance / Stamina","slug":"endurance-stamina","description":"Boost cardiovascular fitness and stamina.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":10,"fields":{"name":"Speed & Agility","slug":"speed-agility","description":"Increase quickness and reaction ability.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":11,"fields":{"name":"Balance & Coordination","slug":"balance-coordination","description":"Improve stability, coordination, and body control.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":12,"fields":{"name":"Core Strength","slug":"core-strength","description":"Build a strong core for posture and performance.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":13,"fields":{"name":"Functional Fitness","slug":"functional-fitness","description":"Train for real‑life movement and resilience.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":14,"fields":{"name":"Mobility & Flexibility","slug":"mobility-flexibility","description":"Increase range of motion and movement quality.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":15,"fields":{"name":"Posture & Alignment","slug":"posture-alignment","description":"Improve spinal alignment and posture.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":16,"fields":{"name":"Recovery & Injury Prevention","slug":"recovery-injury-prevention","description":"Recover faster and reduce injury risk.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":17,"fields":{"name":"Joint Health","slug":"joint-health","description":"Support joint strength and comfort.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":18,"fields":{"name":"Back Pain Relief","slug":"back-pain-relief","description":"Reduce back pain with targeted habits and movement.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":19,"fields":{"name":"Energy Boost","slug":"energy-boost","description":"Increase daily energy and reduce fatigue.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":20,"fields":{"name":"Stress Relief","slug":"stress-relief","description":"Calm the nervous system and improve resilience.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":21,"fields":{"name":"Better Sleep","slug":"better-sleep","description":"Improve sleep quality and recovery.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":22,"fields":{"name":"Focus & Mental Clarity","slug":"focus-mental-clarity","description":"Support cognitive focus and clarity.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":23,"fields":{"name":"Heart Health","slug":"heart-health","description":"Support cardiovascular health and circulation.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":24,"fields":{"name":"Blood Pressure Support","slug":"blood-pressure-support","description":"Promote healthy blood pressure levels.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":25,"fields":{"name":"Circulation Support","slug":"circulation-support","description":"Improve blood flow and vascular function.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":26,"fields":{"name":"Metabolic Health","slug":"metabolic-health","description":"Optimize metabolism and energy balance.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":27,"fields":{"name":"Blood Sugar Balance","slug":"blood-sugar-balance","description":"Support stable glucose levels.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":28,"fields":{"name":"Insulin Sensitivity","slug":"insulin-sensitivity","description":"Improve insulin response and metabolic health.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":29,"fields":{"name":"Hormone Balance","slug":"hormone-balance","description":"Support healthy hormone regulation.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":30,"fields":{"name":"Thyroid Support","slug":"thyroid-support","description":"Nutritional support for thyroid health.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":31,"fields":{"name":"Gut Health","slug":"gut-health","description":"Improve digestion and microbiome health.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":32,"fields":{"name":"Digestion Support","slug":"digestion-support","description":"Support smoother digestion and nutrient absorption.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":33,"fields":{"name":"Bloating Relief","slug":"bloating-relief","description":"Reduce bloating and discomfort.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":34,"fields":{"name":"Immunity","slug":"immunity","description":"Strengthen immune defense and resilience.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":35,"fields":{"name":"Anti‑Inflammation","slug":"anti-inflammation","description":"Reduce chronic inflammation with diet and lifestyle.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":36,"fields":{"name":"Seasonal Wellness","slug":"seasonal-wellness","description":"Support wellness through seasonal changes.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":37,"fields":{"name":"Skin Care","slug":"skin-care","description":"Nourish skin with targeted nutrients.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":38,"fields":{"name":"Hair Care","slug":"hair-care","description":"Support hair strength and growth.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":39,"fields":{"name":"Nail Health","slug":"nail-health","description":"Strengthen nails with nutrition and care.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-
-  {"model":"goals.goal","pk":40,"fields":{"name":"Healthy Aging / Longevity","slug":"healthy-aging-longevity","description":"Support long‑term wellness and vitality.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":41,"fields":{"name":"Detox & Clean Living","slug":"detox-clean-living","description":"Reduce toxic load and improve wellness habits.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}},
-  {"model":"goals.goal","pk":42,"fields":{"name":"Healthy Habits","slug":"healthy-habits","description":"Build sustainable daily routines.","image_recipes":"seed/weightloss-recipes.jpg","image_products":"seed/weightloss-products.jpg","image_workouts":"seed/weightloss-workouts.jpg","image_articles":"seed/weightloss-articles.jpg"}}
+  {
+    "model": "goals.goal",
+    "pk": 1,
+    "fields": {
+      "name": "Weight Loss",
+      "slug": "weight-loss",
+      "description": "Sustainable fat loss with smart nutrition and movement.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 2,
+    "fields": {
+      "name": "Fat Loss",
+      "slug": "fat-loss",
+      "description": "Reduce body fat while preserving lean mass.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 3,
+    "fields": {
+      "name": "Lean Body / Recomposition",
+      "slug": "lean-body-recomposition",
+      "description": "Build muscle and burn fat at the same time.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 4,
+    "fields": {
+      "name": "Healthy Weight Gain",
+      "slug": "healthy-weight-gain",
+      "description": "Add weight with nutrient‑dense, balanced meals.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 5,
+    "fields": {
+      "name": "Muscle Gain",
+      "slug": "muscle-gain",
+      "description": "Increase muscle size and strength with proper fuel.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 6,
+    "fields": {
+      "name": "Toning / Definition",
+      "slug": "toning-definition",
+      "description": "Improve muscle definition and body shape.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 7,
+    "fields": {
+      "name": "Strength & Power",
+      "slug": "strength-power",
+      "description": "Maximize strength output and overall power.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 8,
+    "fields": {
+      "name": "Athletic Performance",
+      "slug": "athletic-performance",
+      "description": "Improve speed, agility, and explosive performance.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 9,
+    "fields": {
+      "name": "Endurance / Stamina",
+      "slug": "endurance-stamina",
+      "description": "Boost cardiovascular fitness and stamina.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 10,
+    "fields": {
+      "name": "Speed & Agility",
+      "slug": "speed-agility",
+      "description": "Increase quickness and reaction ability.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 11,
+    "fields": {
+      "name": "Balance & Coordination",
+      "slug": "balance-coordination",
+      "description": "Improve stability, coordination, and body control.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 12,
+    "fields": {
+      "name": "Core Strength",
+      "slug": "core-strength",
+      "description": "Build a strong core for posture and performance.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 13,
+    "fields": {
+      "name": "Functional Fitness",
+      "slug": "functional-fitness",
+      "description": "Train for real‑life movement and resilience.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 14,
+    "fields": {
+      "name": "Mobility & Flexibility",
+      "slug": "mobility-flexibility",
+      "description": "Increase range of motion and movement quality.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 15,
+    "fields": {
+      "name": "Posture & Alignment",
+      "slug": "posture-alignment",
+      "description": "Improve spinal alignment and posture.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 16,
+    "fields": {
+      "name": "Recovery & Injury Prevention",
+      "slug": "recovery-injury-prevention",
+      "description": "Recover faster and reduce injury risk.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 17,
+    "fields": {
+      "name": "Joint Health",
+      "slug": "joint-health",
+      "description": "Support joint strength and comfort.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 18,
+    "fields": {
+      "name": "Back Pain Relief",
+      "slug": "back-pain-relief",
+      "description": "Reduce back pain with targeted habits and movement.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 19,
+    "fields": {
+      "name": "Energy Boost",
+      "slug": "energy-boost",
+      "description": "Increase daily energy and reduce fatigue.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 20,
+    "fields": {
+      "name": "Stress Relief",
+      "slug": "stress-relief",
+      "description": "Calm the nervous system and improve resilience.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 21,
+    "fields": {
+      "name": "Better Sleep",
+      "slug": "better-sleep",
+      "description": "Improve sleep quality and recovery.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 22,
+    "fields": {
+      "name": "Focus & Mental Clarity",
+      "slug": "focus-mental-clarity",
+      "description": "Support cognitive focus and clarity.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 23,
+    "fields": {
+      "name": "Heart Health",
+      "slug": "heart-health",
+      "description": "Support cardiovascular health and circulation.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 24,
+    "fields": {
+      "name": "Blood Pressure Support",
+      "slug": "blood-pressure-support",
+      "description": "Promote healthy blood pressure levels.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 25,
+    "fields": {
+      "name": "Circulation Support",
+      "slug": "circulation-support",
+      "description": "Improve blood flow and vascular function.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 26,
+    "fields": {
+      "name": "Metabolic Health",
+      "slug": "metabolic-health",
+      "description": "Optimize metabolism and energy balance.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 27,
+    "fields": {
+      "name": "Blood Sugar Balance",
+      "slug": "blood-sugar-balance",
+      "description": "Support stable glucose levels.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 28,
+    "fields": {
+      "name": "Insulin Sensitivity",
+      "slug": "insulin-sensitivity",
+      "description": "Improve insulin response and metabolic health.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 29,
+    "fields": {
+      "name": "Hormone Balance",
+      "slug": "hormone-balance",
+      "description": "Support healthy hormone regulation.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 30,
+    "fields": {
+      "name": "Thyroid Support",
+      "slug": "thyroid-support",
+      "description": "Nutritional support for thyroid health.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 31,
+    "fields": {
+      "name": "Gut Health",
+      "slug": "gut-health",
+      "description": "Improve digestion and microbiome health.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 32,
+    "fields": {
+      "name": "Digestion Support",
+      "slug": "digestion-support",
+      "description": "Support smoother digestion and nutrient absorption.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 33,
+    "fields": {
+      "name": "Bloating Relief",
+      "slug": "bloating-relief",
+      "description": "Reduce bloating and discomfort.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 34,
+    "fields": {
+      "name": "Immunity",
+      "slug": "immunity",
+      "description": "Strengthen immune defense and resilience.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 35,
+    "fields": {
+      "name": "Anti‑Inflammation",
+      "slug": "anti-inflammation",
+      "description": "Reduce chronic inflammation with diet and lifestyle.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 36,
+    "fields": {
+      "name": "Seasonal Wellness",
+      "slug": "seasonal-wellness",
+      "description": "Support wellness through seasonal changes.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 37,
+    "fields": {
+      "name": "Skin Care",
+      "slug": "skin-care",
+      "description": "Nourish skin with targeted nutrients.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 38,
+    "fields": {
+      "name": "Hair Care",
+      "slug": "hair-care",
+      "description": "Support hair strength and growth.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 39,
+    "fields": {
+      "name": "Nail Health",
+      "slug": "nail-health",
+      "description": "Strengthen nails with nutrition and care.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 40,
+    "fields": {
+      "name": "Healthy Aging / Longevity",
+      "slug": "healthy-aging-longevity",
+      "description": "Support long‑term wellness and vitality.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 41,
+    "fields": {
+      "name": "Detox & Clean Living",
+      "slug": "detox-clean-living",
+      "description": "Reduce toxic load and improve wellness habits.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  },
+  {
+    "model": "goals.goal",
+    "pk": 42,
+    "fields": {
+      "name": "Healthy Habits",
+      "slug": "healthy-habits",
+      "description": "Build sustainable daily routines.",
+      "image_recipes": "seed/weightloss-recipes.jpg",
+      "image_products": "seed/weightloss-products.jpg",
+      "image_workouts": "seed/weightloss-workouts.jpg",
+      "image_articles": "seed/weightloss-articles.jpg"
+    }
+  }
 ]

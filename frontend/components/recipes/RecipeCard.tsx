@@ -33,42 +33,52 @@ export default function RecipeCard({ recipe }: { recipe: RecipeCardData }) {
   return (
     <Link
       href={`/recipes/${recipe.id}`}
-      className="group block rounded-2xl border border-border bg-card shadow-soft overflow-hidden hover:-translate-y-1 hover:shadow-lg transition"
+      className="card-soft group overflow-hidden hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full"
     >
-      {image ? (
-        <Image
-          src={image}
-          alt={recipe.title}
-          width={900}
-          height={600}
-          className="h-40 w-full object-cover"
-        />
-      ) : (
-        <div className="h-40 bg-linear-to-br from-primary/15 via-accent/10 to-transparent flex items-end p-4">
-          <span className="text-xs px-2 py-1 rounded-full bg-white/80 border border-border text-mutedForeground">
-            Recipe
+      <div className="relative h-48 w-full overflow-hidden">
+        {image ? (
+          <Image
+            src={image}
+            alt={recipe.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+        ) : (
+          <div className="h-full w-full bg-linear-to-br from-primary/10 via-accent/5 to-transparent flex items-center justify-center">
+            <span className="text-xs font-bold text-primary/40 uppercase tracking-widest">Teja Ritual</span>
+          </div>
+        )}
+        <div className="absolute top-3 left-3">
+          <span className="badge-pill bg-white/90 backdrop-blur-sm border-none shadow-sm capitalize">
+            {recipe.meal_type || 'Recipe'}
           </span>
         </div>
-      )}
+      </div>
 
-      <div className="p-4 space-y-1">
-        <div className="font-semibold group-hover:text-primary transition">
+      <div className="p-5 flex flex-col flex-grow">
+        <h3 className="text-xl font-serif font-bold text-fg leading-snug group-hover:text-primary transition-colors">
           {recipe.title}
-        </div>
-        <div className="text-sm text-mutedForeground">
-          {recipe.calories ?? 0} kcal · {recipe.protein ?? 0}g protein
+        </h3>
+
+        <div className="mt-3 flex items-center gap-3 text-[10px] font-bold text-mutedForeground uppercase tracking-widest">
+          <span>{recipe.calories ?? 0} kcal</span>
+          <span className="h-1 w-1 rounded-full bg-border" />
+          <span>{recipe.protein ?? 0}g protein</span>
         </div>
 
-        <div className="flex items-center justify-between text-xs text-mutedForeground mt-2">
-          <div className="flex items-center gap-4">
-            <span>⭐ {recipe.average_rating ?? 0} ({recipe.rating_count ?? 0})</span>
+        <div className="mt-auto pt-6 flex items-center justify-between">
+          <div className="flex items-center gap-1.5 text-xs text-mutedForeground">
+            <span className="text-primary">★</span>
+            <span className="font-bold text-fg">{recipe.average_rating ?? 0}</span>
+            <span className="opacity-50">({recipe.rating_count ?? 0})</span>
           </div>
+
           <button
             onClick={onLike}
-            className="flex items-center gap-1 hover:text-primary transition"
+            className="flex items-center gap-1.5 hover:scale-110 transition-transform"
           >
-            <span>{liked ? "❤️" : "🤍"}</span>
-            <span>{likes}</span>
+            <span className="text-sm">{liked ? "❤️" : "🤍"}</span>
+            <span className="text-xs font-bold text-fg">{likes}</span>
           </button>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import IngredientCard from "@/components/ingredients/IngredientCard";
 import { fetchIngredientsByGoal } from "@/api/ingredients";
 import type { Ingredient } from "@/types/ingredients";
@@ -72,123 +74,128 @@ export default async function GoalIngredientsPage({
   };
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold capitalize">{title} Ingredients</h1>
+    <main className="container-page py-12 space-y-12 animate-in fade-in duration-1000">
+      {/* Editorial Header */}
+      <div className="max-w-4xl space-y-4">
+        <div className="flex items-center gap-3">
+          <Link href={`/goals/${slug}`} className="text-[10px] font-bold text-primary uppercase tracking-[0.4em] hover:opacity-70 transition-opacity">
+            {title} Sanctuary
+          </Link>
+          <div className="h-px w-8 bg-primary/30" />
+          <span className="text-[10px] font-bold text-mutedForeground uppercase tracking-[0.4em]">Botanical Library</span>
+        </div>
+        <h1 className="text-5xl md:text-7xl font-serif font-bold text-fg tracking-tight leading-tight capitalize">
+          {title} Archivum
+        </h1>
+        <p className="text-xl text-mutedForeground font-serif italic leading-relaxed max-w-2xl">
+          "A curated selection of potent botanicals specifically identified for their synergistic effects on {title}."
+        </p>
+      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        {/* Refined Codex Sidebar */}
         <aside className="lg:col-span-4">
-          <div className="sticky top-24 rounded-2xl border border-border bg-card p-4 shadow-soft space-y-4">
-            <div className="text-sm font-semibold">Filters</div>
-            <form className="space-y-3" method="get" action={`/goals/${slug}/ingredients`}>
-              <input
-                name="search"
-                defaultValue={search}
-                placeholder={`Search ${title} ingredients...`}
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <select
-                name="ordering"
-                defaultValue={ordering}
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              >
-                <option value="">Sort by</option>
-                <option value="name">Name A–Z</option>
-                <option value="-name">Name Z–A</option>
-                <option value="-protein">Protein high → low</option>
-                <option value="-carbs">Carbs high → low</option>
-                <option value="-fat">Fat high → low</option>
-                <option value="-calories">Calories high → low</option>
-              </select>
-              <div className="text-xs text-mutedForeground">Macros</div>
-              <input
-                name="min_calories"
-                defaultValue={min_calories}
-                placeholder="Min kcal"
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              />
-              <input
-                name="max_calories"
-                defaultValue={max_calories}
-                placeholder="Max kcal"
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              />
-              <input
-                name="min_protein"
-                defaultValue={min_protein}
-                placeholder="Min protein"
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              />
-              <input
-                name="max_protein"
-                defaultValue={max_protein}
-                placeholder="Max protein"
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              />
-              <input
-                name="min_carbs"
-                defaultValue={min_carbs}
-                placeholder="Min carbs"
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              />
-              <input
-                name="max_carbs"
-                defaultValue={max_carbs}
-                placeholder="Max carbs"
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              />
-              <input
-                name="min_fat"
-                defaultValue={min_fat}
-                placeholder="Min fat"
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              />
-              <input
-                name="max_fat"
-                defaultValue={max_fat}
-                placeholder="Max fat"
-                className="w-full rounded-xl border border-border px-4 py-3 bg-white"
-              />
-              <button className="w-full rounded-xl bg-primary text-primaryForeground px-4 py-3">
-                Apply
-              </button>
-            </form>
+          <div className="sticky top-28 space-y-8">
+            <div className="p-8 rounded-[2rem] bg-white shadow-rose border-none space-y-8">
+              <div className="space-y-2">
+                <h3 className="text-xl font-serif font-bold text-fg">Refine the Codex</h3>
+                <p className="text-[10px] text-primary font-bold uppercase tracking-widest opacity-60">Targeted {title} Filter</p>
+              </div>
+
+              <form className="space-y-6" method="get" action={`/goals/${slug}/ingredients`}>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-mutedForeground px-1">Botanical Search</label>
+                  <input
+                    name="search"
+                    defaultValue={search}
+                    placeholder="Search the archives..."
+                    className="w-full rounded-2xl border border-primary/10 px-5 py-4 bg-surface text-sm focus:outline-none focus:ring-4 focus:ring-primary/5 focus:bg-white transition-all duration-300"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-mutedForeground px-1">Ordering</label>
+                  <select
+                    name="ordering"
+                    defaultValue={ordering}
+                    className="w-full rounded-2xl border border-primary/10 px-5 py-4 bg-surface text-sm appearance-none focus:outline-none focus:ring-4 focus:ring-primary/5 focus:bg-white transition-all duration-300"
+                  >
+                    <option value="">Default Codex Order</option>
+                    <option value="name">Botanical A–Z</option>
+                    <option value="-name">Botanical Z–A</option>
+                    <option value="-protein">Protein Concentration</option>
+                    <option value="-calories">Bio-Energy Rank</option>
+                  </select>
+                </div>
+
+                <div className="space-y-4">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-mutedForeground px-1">Macro Analysis</label>
+                  <div className="grid grid-cols-2 gap-3">
+                    <input name="min_calories" defaultValue={min_calories} placeholder="Min Kcal" className="input-soft" />
+                    <input name="max_calories" defaultValue={max_calories} placeholder="Max Kcal" className="input-soft" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-3">
+                    <input name="min_protein" defaultValue={min_protein} placeholder="Min Protein" className="input-soft" />
+                    <input name="max_protein" defaultValue={max_protein} placeholder="Max Protein" className="input-soft" />
+                  </div>
+                </div>
+
+                <button className="btn-primary w-full py-4 text-[10px] uppercase tracking-[0.3em] shadow-rose mt-4">
+                  Reveal Botanicals
+                </button>
+              </form>
+            </div>
+
+            {/* Aesthetic Quote */}
+            <div className="p-8 text-center space-y-4 opacity-40">
+              <div className="h-px w-12 bg-primary/30 mx-auto" />
+              <p className="text-xs font-serif italic text-mutedForeground">"Where science meets botanical wisdom."</p>
+            </div>
           </div>
         </aside>
-        <section className="lg:col-span-8">
-          {items.length === 0 && (
-            <div className="text-mutedForeground">No ingredients found for this goal.</div>
+
+        {/* Results Ritual */}
+        <section className="lg:col-span-8 space-y-10">
+          {items.length === 0 ? (
+            <div className="h-[40vh] flex flex-col items-center justify-center text-center space-y-4">
+              <div className="h-12 w-12 rounded-full border border-primary/20 flex items-center justify-center text-primary/40">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
+                </svg>
+              </div>
+              <p className="text-mutedForeground font-serif italic">No botanical matches found in the {title} archives.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+              {items.map((i) => (
+                <IngredientCard key={i.id} ingredient={i} />
+              ))}
+            </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {items.map((i) => (
-              <IngredientCard key={i.id} ingredient={i} />
-            ))}
-          </div>
-
           {totalPages > 1 && (
-            <div className="flex items-center justify-between text-sm mt-6">
-              <div className="text-mutedForeground">
-                Page {currentPage} of {totalPages}
+            <div className="pt-12 border-t border-primary/10 flex items-center justify-between">
+              <div className="text-[10px] font-bold text-mutedForeground uppercase tracking-widest">
+                Entry {currentPage} of {totalPages}
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-4">
                 <a
-                  className={`px-3 py-2 rounded-lg border border-border ${currentPage <= 1 ? "pointer-events-none opacity-50" : ""}`}
+                  className={`h-12 w-12 rounded-full border border-border flex items-center justify-center text-mutedForeground hover:border-primary hover:text-primary transition-all duration-300 ${currentPage <= 1 ? "pointer-events-none opacity-20" : ""}`}
                   href={buildPageLink(currentPage - 1)}
                 >
-                  Prev
+                  <ChevronLeft size={18} />
                 </a>
                 <a
-                  className={`px-3 py-2 rounded-lg border border-border ${currentPage >= totalPages ? "pointer-events-none opacity-50" : ""}`}
+                  className={`h-12 w-12 rounded-full border border-border flex items-center justify-center text-mutedForeground hover:border-primary hover:text-primary transition-all duration-300 ${currentPage >= totalPages ? "pointer-events-none opacity-20" : ""}`}
                   href={buildPageLink(currentPage + 1)}
                 >
-                  Next
+                  <ChevronRight size={18} />
                 </a>
               </div>
             </div>
           )}
         </section>
       </div>
-
-    </div>
+    </main>
   );
 }

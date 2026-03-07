@@ -8,31 +8,26 @@ from .permissions import IsAdminOrReadOnly
 
 
 class IngredientViewSet(viewsets.ModelViewSet):
-    queryset = Ingredient.objects.all().order_by('name')
-    serializer_class = IngredientSerializer
+    queryset           = Ingredient.objects.all().order_by('name')
+    serializer_class   = IngredientSerializer
     permission_classes = [IsAdminOrReadOnly]
 
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_class = IngredientFilter
+    filter_backends  = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class  = IngredientFilter
 
     search_fields = [
         'name',
         'description',
-        'benefits__text',
-        'warnings__text',
+        'micronutrients__name',   # search inside micronutrient names too
     ]
 
     ordering_fields = [
         'name',
+        'ingredient_type',
         'calories',
-        'carbs',
         'protein',
+        'carbs',
         'fat',
         'fiber',
-        'vitamin_a',
-        'vitamin_c',
-        'calcium',
-        'iron',
-        'potassium',
     ]
     ordering = ['name']

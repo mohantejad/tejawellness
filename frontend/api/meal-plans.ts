@@ -13,6 +13,7 @@ export async function fetchMealPlans(filters: {
   min_price?: string;
   max_price?: string;
   ordering?: string;
+  page?: number;
 } = {}) {
   const qs = toQuery(filters);
   const data: PaginatedResponse<MealPlan> = await apiFetch(`/api/meal-plans/${qs}`);
@@ -28,6 +29,7 @@ export async function fetchMealPlansByGoal(slug: string, filters: {
   min_price?: string;
   max_price?: string;
   ordering?: string;
+  page?: number;
 } = {}) {
   const qs = toQuery({ goal: slug, ...filters });
   const data: PaginatedResponse<MealPlan> = await apiFetch(`/api/meal-plans/${qs}`);

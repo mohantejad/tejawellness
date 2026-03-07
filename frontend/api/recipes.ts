@@ -22,6 +22,7 @@ export async function fetchRecipesByGoal(slug: string, filters: {
   diet_type?: string;
   meal_type?: string;
   ordering?: string;
+  page?: number;
 } = {}) {
   const qs = toQuery({ goal: slug, ...filters });
   const data: PaginatedResponse<Recipe> = await apiFetch(`/api/recipes/${qs}`);
@@ -47,6 +48,7 @@ export async function fetchRecipes(filters: {
   diet_type?: string;
   meal_type?: string;
   ordering?: string;
+  page?: number;
 } = {}) {
   const qs = toQuery(filters);
   const data: PaginatedResponse<Recipe> = await apiFetch(`/api/recipes/${qs}`);

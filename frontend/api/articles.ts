@@ -6,6 +6,7 @@ import { toQuery } from "./query";
 export async function fetchArticlesByGoal(slug: string, filters: {
   search?: string;
   ordering?: string;
+  page?: number;
 } = {}) {
   const qs = toQuery({ goal: slug, ...filters });
   const data: PaginatedResponse<Article> = await apiFetch(`/api/articles/${qs}`);
@@ -15,6 +16,7 @@ export async function fetchArticlesByGoal(slug: string, filters: {
 export async function fetchArticles(filters: {
   search?: string;
   ordering?: string;
+  page?: number;
 } = {}) {
   const qs = toQuery(filters);
   const data: PaginatedResponse<Article> = await apiFetch(`/api/articles/${qs}`);

@@ -6,3 +6,7 @@ export async function fetchGoals(page = 1) {
   const data: PaginatedResponse<Goal> = await apiFetch(`/api/goals/?page=${page}`);
   return data;
 }
+
+export async function fetchGoalBySlug(slug: string): Promise<Goal> {
+  return await apiFetch(`/api/goals/${slug}/`);
+}

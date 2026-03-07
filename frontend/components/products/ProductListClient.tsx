@@ -18,7 +18,7 @@ export default function ProductListClient({ slug }: { slug: string }) {
       in_stock: sp.get("in_stock") === "true" ? true : undefined,
       ordering: sp.get("ordering") ?? undefined,
     };
-    fetchProductsByGoal(slug, filters).then(setProducts).catch(() => setProducts([]));
+    fetchProductsByGoal(slug, filters).then(res => setProducts(res.results || [])).catch(() => setProducts([]));
   }, [slug, sp]);
 
   if (products.length === 0) {
