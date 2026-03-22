@@ -28,8 +28,10 @@ from .recommendations import (
 )
 from .search import GlobalSearchView
 from .routines import RoutineView, IngredientSubstituteView
+from .views import HealthCheckView
 
 urlpatterns = [
+    path('api/health/', HealthCheckView.as_view(), name='health-check'),
     path('admin/', admin.site.urls),
     path('auth/', include('djoser.urls')),
     path('auth/', include('users.urls')),
