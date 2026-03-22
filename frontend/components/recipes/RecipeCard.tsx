@@ -31,9 +31,8 @@ export default function RecipeCard({ recipe }: { recipe: RecipeCardData }) {
   };
 
   return (
-    <Link
-      href={`/recipes/${recipe.id}`}
-      className="card-soft group overflow-hidden hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full"
+    <div
+      className="card-soft group overflow-hidden transition-all duration-300 flex flex-col h-full"
     >
       <div className="relative h-48 w-full overflow-hidden">
         {image ? (
@@ -82,6 +81,6 @@ export default function RecipeCard({ recipe }: { recipe: RecipeCardData }) {
           </button>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
