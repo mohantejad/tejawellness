@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
         port: "8000",
         pathname: "/media/**",
       },
+      {
+        protocol: "https",
+        hostname: "tejawellness.onrender.com",
+        pathname: "/media/**",
+      },
     ],
     unoptimized: true,
   },
