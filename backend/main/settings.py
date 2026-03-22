@@ -14,6 +14,7 @@ from datetime import timedelta
 from os import getenv
 import os
 from pathlib import Path
+import dj_database_url
 from django.core.management.utils import get_random_secret_key
 from dotenv import load_dotenv
 
@@ -105,21 +106,33 @@ TEMPLATES = [
 WSGI_APPLICATION = 'main.wsgi.application'
 
 # Database
-# https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': getenv('DB_NAME'),
-        'USER': getenv('DB_USER'),
-        'PASSWORD': getenv('DB_PASSWORD'),
-        'HOST': getenv('DB_HOST'),
-        'PORT': getenv('DB_PORT'),
-        'CONN_MAX_AGE': int(getenv('DB_CONN_MAX_AGE', '60')),
-        'OPTIONS': {
-            'sslmode': getenv('DB_SSLMODE', 'prefer')
-        },
+# Use DATABASE_URL for production (Neon/Render), fallback to local env
+DATABASE_URL = getenv('DATABASE_URL')
+
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=DATABASE_URL,
+            conn_max_age=600,
+            conn_health_checks=True,
+            ssl_require=True,
+        )
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': getenv('DB_NAME'),
+            'USER': getenv('DB_USER'),
+            'PASSWORD': getenv('DB_PASSWORD'),
+            'HOST': getenv('DB_HOST'),
+            'PORT': getenv('DB_PORT'),
+            'CONN_MAX_AGE': int(getenv('DB_CONN_MAX_AGE', '60')),
+            'OPTIONS': {
+                'sslmode': getenv('DB_SSLMODE', 'prefer')
+            },
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
@@ -346,7 +359,7 @@ SECURE_REFERRER_POLICY = os.getenv(
     'SECURE_REFERRER_POLICY', 'strict-origin-when-cross-origin')
 CSRF_TRUSTED_ORIGINS = [
     o.strip() 
-    for o in os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',') 
+    for o in getenv('CSRF_TRUSTED_ORIGINS', 'http://localhost:3000,http://127.0.0.1:3000').split(',') 
     if o.strip()
 ]
 CSRF_COOKIE_HTTPONLY = False
