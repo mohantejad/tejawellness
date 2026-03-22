@@ -10,8 +10,6 @@ import { ChevronDown, Search, User, Menu, X, Sparkles, ShoppingBag, BookOpen } f
 type SearchResult = {
   ingredients: { id: number; name: string; image?: string | null }[];
   recipes: { id: number; title: string; image?: string | null }[];
-  meal_plans: { id: number; title: string; image?: string | null }[];
-  products: { id: number; name: string; image?: string | null; price?: string | number }[];
 };
 
 const NAV_ITEMS = [
@@ -193,7 +191,7 @@ export default function Header() {
                       </div>
                     )}
 
-                    {!results.ingredients.length && !results.recipes.length && !results.products.length && !results.meal_plans.length && (
+                    {!results.ingredients.length && !results.recipes.length && (
                       <div className='text-xs font-bold text-mutedForeground uppercase tracking-widest text-center py-4'>No results found.</div>
                     )}
                   </div>
