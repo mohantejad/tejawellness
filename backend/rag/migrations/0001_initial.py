@@ -6,9 +6,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    initial = True
+    initial = False
 
     dependencies = [
+        ('rag', '0000_extension'),
     ]
 
     operations = [
