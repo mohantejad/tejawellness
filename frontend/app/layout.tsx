@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "Discover the best ingredients, science-backed recipes, and curated products for radiant skin and healthy hair.",
 };
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

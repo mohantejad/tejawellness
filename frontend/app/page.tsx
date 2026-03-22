@@ -6,7 +6,7 @@ import type { PaginatedResponse } from "@/types/api";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import GoalsSection from "@/components/home/GoalsSections";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60; // Revalidate every minute
 
 export default async function HomePage() {
   const data: PaginatedResponse<Goal> = await fetchGoals(1);
