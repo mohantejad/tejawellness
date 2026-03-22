@@ -4,6 +4,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 from djoser.social.views import ProviderAuthView
+from rest_framework.permissions import IsAuthenticated
+from .serializers import UserProfileSerializer
+from rest_framework.permissions import IsAuthenticated
+from .serializers import UserProfileSerializer
 
 
 class CustomTokenObtainPairView(TokenObtainPairView):
@@ -147,3 +151,18 @@ class CustomProviderAuthView(ProviderAuthView):
             response.data = {"detail": "Logged in with provider"}
 
         return response
+
+
+class UserProfileView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        serializer = UserProfileSerializer(request.user.profile)
+        return Response(serializer.data)
+
+    def patch(self, request):
+        serializer = UserProfileSerializer(request.user.profile, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

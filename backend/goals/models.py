@@ -8,7 +8,6 @@ class Goal(models.Model):
     image_url = models.ImageField(upload_to="goals/images", blank=True, null=True)
     image_recipes = models.ImageField(upload_to="goals/images/recipes/", blank=True, null=True)
     image_products = models.ImageField(upload_to="goals/images/products/", blank=True, null=True)
-    image_workouts = models.ImageField(upload_to="goals/images/workouts/", blank=True, null=True)
     image_articles = models.ImageField(upload_to="goals/images/articles/", blank=True, null=True)
 
     def save(self, *args, **kwargs):

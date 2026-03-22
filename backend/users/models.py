@@ -65,3 +65,39 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+class UserProfile(models.Model):
+    SKIN_TYPES = [
+        ('dry', 'Dry'),
+        ('oily', 'Oily'),
+        ('combination', 'Combination'),
+        ('sensitive', 'Sensitive'),
+        ('normal', 'Normal'),
+    ]
+    HAIR_TYPES = [
+        ('straight', 'Straight'),
+        ('wavy', 'Wavy'),
+        ('curly', 'Curly'),
+        ('coily', 'Coily'),
+    ]
+    HAIR_TEXTURES = [
+        ('fine', 'Fine'),
+        ('medium', 'Medium'),
+        ('thick', 'Thick'),
+    ]
+
+    user = models.OneToOneField(UserAccount, on_delete=models.CASCADE, related_name='profile')
+    
+    skin_type = models.CharField(max_length=20, choices=SKIN_TYPES, blank=True)
+    hair_type = models.CharField(max_length=20, choices=HAIR_TYPES, blank=True)
+    hair_texture = models.CharField(max_length=20, choices=HAIR_TEXTURES, blank=True)
+    
+    # Comma-separated or JSON list of concerns (e.g. "acne, aging, frizz")
+    skin_concerns = models.TextField(blank=True, help_text="Specific skin concerns")
+    hair_concerns = models.TextField(blank=True, help_text="Specific hair concerns")
+
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Profile for {self.user.email}"

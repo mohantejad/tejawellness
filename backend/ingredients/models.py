@@ -92,6 +92,8 @@ class IngredientGoal(models.Model):
     ingredient   = models.ForeignKey(Ingredient, on_delete=models.CASCADE, related_name='goal_links')
     goal         = models.ForeignKey('goals.Goal', on_delete=models.CASCADE, related_name='ingredient_links')
     benefit_text = models.CharField(max_length=255, blank=True)
+    scientific_explanation = models.TextField(blank=True, help_text="AI-generated scientific reason for this benefit")
+    usage_tips = models.TextField(blank=True, help_text="Practical tips for using this ingredient for this goal")
 
     class Meta:
         unique_together = ('ingredient', 'goal')

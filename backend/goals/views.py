@@ -13,16 +13,6 @@ class GoalViewSet(viewsets.ReadOnlyModelViewSet):
     PRIORITY_SLUGS = [
         "skin-care",
         "hair-care",
-        "weight-loss",
-        "lean-body-recomposition",
-        "gut-health",
-        "stress-relief",
-        "better-sleep",
-        "anti-inflammation",
-        "hormone-balance",
-        "immunity",
-        "energy-boost",
-        "healthy-aging-longevity",
     ]
 
     def get_queryset(self):

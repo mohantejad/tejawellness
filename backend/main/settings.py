@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'articles.apps.ArticlesConfig',
     'rag.apps.RagConfig',
+    'tracking.apps.TrackingConfig',
     
     'pgvector.django',
     'rest_framework',

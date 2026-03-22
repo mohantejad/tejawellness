@@ -56,6 +56,8 @@ class IngredientSerializer(serializers.ModelSerializer):
                 'id':           link.id,
                 'goal':         GoalSerializer(link.goal).data,
                 'benefit_text': link.benefit_text,
+                'scientific_explanation': link.scientific_explanation,
+                'usage_tips':   link.usage_tips,
             }
             for link in links
         ]

@@ -22,16 +22,21 @@ class Command(BaseCommand):
         updated = 0
 
         for item in data:
+            # Handle both flat and nested (Django fixture) formats
+            fields = item.get("fields", item)
+            slug = fields.get("slug") or item.get("slug")
+            
+            if not slug:
+                continue
+
             obj, is_created = Goal.objects.update_or_create(
-                slug=item["slug"],
+                slug=slug,
                 defaults={
-                    "name": item["name"],
-                    "description": item.get("description", ""),
-                    # add these if you already added the 4 images
-                    "image_recipes": item.get("image_recipes") or None,
-                    "image_products": item.get("image_products") or None,
-                    "image_workouts": item.get("image_workouts") or None,
-                    "image_articles": item.get("image_articles") or None,
+                    "name": fields["name"],
+                    "description": fields.get("description", ""),
+                    "image_recipes": fields.get("image_recipes") or None,
+                    "image_products": fields.get("image_products") or None,
+                    "image_articles": fields.get("image_articles") or None,
                 },
             )
             created += 1 if is_created else 0

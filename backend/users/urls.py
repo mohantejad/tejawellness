@@ -6,6 +6,7 @@ from .views import (
     CustomTokenVerifyView,
     LogoutView,
     CustomProviderAuthView,
+    UserProfileView,
 )
 from django.urls import path, re_path
 
@@ -22,4 +23,5 @@ urlpatterns = [
     path('jwt/verify/', CustomTokenVerifyView.as_view(), name='token_verify'),
     # Logout endpoint clears auth cookies.
     path('logout/', LogoutView.as_view(), name='token_logout'),
+    path('profile/', UserProfileView.as_view(), name='user_profile'),
 ]

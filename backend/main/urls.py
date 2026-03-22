@@ -27,6 +27,7 @@ from .recommendations import (
     RecommendedMealPlansView,
 )
 from .search import GlobalSearchView
+from .routines import RoutineView, IngredientSubstituteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,6 +40,7 @@ urlpatterns = [
     path("api/", include("products.urls")),
     path('api/', include('articles.urls')),
     path("api/", include("rag.urls")),
+    path("api/tracking/", include("tracking.urls")),
     path("api/search/", GlobalSearchView.as_view(), name="global-search"),
 ]
 
@@ -48,6 +50,8 @@ urlpatterns += [
     path("api/recommendations/recipes/", RecommendedRecipesView.as_view()),
     path("api/recommendations/products/", RecommendedProductsView.as_view()),
     path("api/recommendations/meal-plans/", RecommendedMealPlansView.as_view()),
+    path("api/routines/daily/", RoutineView.as_view(), name="daily-routine"),
+    path("api/ingredients/substitute/", IngredientSubstituteView.as_view(), name="ingredient-substitute"),
 ]
 
 if settings.DEBUG:
