@@ -1,15 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { googleLogin } from "@/api/auth";
 import { useAppDispatch } from "@/redux/hooks";
 import { fetchMe } from "@/redux/slices/authSlice";
 import { toast } from "sonner";
 
-export const dynamic = "force-dynamic";
-
-export default function GoogleCallbackPage() {
+function GoogleCallbackContent() {
   const params = useSearchParams();
   const router = useRouter();
   const dispatch = useAppDispatch();
@@ -35,15 +33,23 @@ export default function GoogleCallbackPage() {
   }, [params, dispatch, router]);
 
   return (
+    <div className="card-soft p-6 max-w-md w-full space-y-2">
+      <h1 className="text-2xl font-bold">Google login</h1>
+      {!error ? (
+        <p className="text-sm text-mutedForeground">Signing you in...</p>
+      ) : (
+        <p className="text-sm text-red-600">{error}</p>
+      )}
+    </div>
+  );
+}
+
+export default function GoogleCallbackPage() {
+  return (
     <div className="min-h-[60vh] flex items-center justify-center">
-      <div className="card-soft p-6 max-w-md w-full space-y-2">
-        <h1 className="text-2xl font-bold">Google login</h1>
-        {!error ? (
-          <p className="text-sm text-mutedForeground">Signing you in...</p>
-        ) : (
-          <p className="text-sm text-red-600">{error}</p>
-        )}
-      </div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <GoogleCallbackContent />
+      </Suspense>
     </div>
   );
 }
