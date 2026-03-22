@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -18,7 +19,7 @@ const schema = z.object({
 
 type Form = z.infer<typeof schema>;
 
-export default function PasswordResetConfirmPage() {
+function PasswordResetConfirmContent() {
   const params = useSearchParams();
   const uid = params.get('uid') || '';
   const token = params.get('token') || '';
@@ -37,17 +38,25 @@ export default function PasswordResetConfirmPage() {
   };
 
   return (
+    <form onSubmit={handleSubmit(onSubmit)} className='card-soft p-6 w-full max-w-md space-y-4'>
+      <h1 className='text-2xl font-bold'>Set new password</h1>
+      <input className='w-full rounded-xl border border-border px-4 py-3' type='password' placeholder='New password' {...register('new_password')} />
+      {errors.new_password && <p className='text-red-600'>{errors.new_password.message}</p>}
+      <input className='w-full rounded-xl border border-border px-4 py-3' type='password' placeholder='Confirm new password' {...register('re_new_password')} />
+      {errors.re_new_password && <p className='text-red-600'>{errors.re_new_password.message}</p>}
+      <button className='w-full rounded-xl bg-primary text-primaryForeground py-3 hover:opacity-90' disabled={isSubmitting || !uid || !token}>
+        {isSubmitting ? 'Saving...' : 'Save password'}
+      </button>
+    </form>
+  );
+}
+
+export default function PasswordResetConfirmPage() {
+  return (
     <div className='min-h-[60vh] flex items-center justify-center'>
-      <form onSubmit={handleSubmit(onSubmit)} className='card-soft p-6 w-full max-w-md space-y-4'>
-        <h1 className='text-2xl font-bold'>Set new password</h1>
-        <input className='w-full rounded-xl border border-border px-4 py-3' type='password' placeholder='New password' {...register('new_password')} />
-        {errors.new_password && <p className='text-red-600'>{errors.new_password.message}</p>}
-        <input className='w-full rounded-xl border border-border px-4 py-3' type='password' placeholder='Confirm new password' {...register('re_new_password')} />
-        {errors.re_new_password && <p className='text-red-600'>{errors.re_new_password.message}</p>}
-        <button className='w-full rounded-xl bg-primary text-primaryForeground py-3 hover:opacity-90' disabled={isSubmitting || !uid || !token}>
-          {isSubmitting ? 'Saving...' : 'Save password'}
-        </button>
-      </form>
+      <Suspense fallback={<div>Loading...</div>}>
+        <PasswordResetConfirmContent />
+      </Suspense>
     </div>
   );
 }
