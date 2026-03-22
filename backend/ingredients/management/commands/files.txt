@@ -1,0 +1,10 @@
+__pycache__
+files.txt
+import_ingredients.py
+seed_essential_ingredients.py
+
+./__pycache__:
+import_ingredients.cpython-314.pyc
+seed_ingredient_goals.cpython-314.pyc
+seed_ingredient_media.cpython-314.pyc
+usda_foundation.cpython-314.pyc
