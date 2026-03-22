@@ -6,6 +6,8 @@ import { confirmUsernameReset } from '@/api/auth';
 import { getErrorMessage } from '@/utils/errors';
 import { toast } from 'sonner';
 
+export const dynamic = 'force-dynamic';
+
 export default function UsernameResetConfirmPage() {
   const params = useSearchParams();
   const uid = params.get('uid') || '';

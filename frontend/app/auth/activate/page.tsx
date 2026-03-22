@@ -7,6 +7,8 @@ import { getErrorMessage } from '@/utils/errors';
 import { toast } from 'sonner';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 export default function ActivatePage() {
   const params = useSearchParams();
   const router = useRouter();
