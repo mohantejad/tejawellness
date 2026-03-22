@@ -2,6 +2,8 @@ import ArticleFilters from '@/components/articles/Articlefilters';
 import ArticleListServer from '@/components/articles/ArticleListServer';
 import { fetchArticles } from '@/api/articles';
 
+export const dynamic = "force-dynamic";
+
 type SearchParams = {
   search?: string;
   ordering?: string;

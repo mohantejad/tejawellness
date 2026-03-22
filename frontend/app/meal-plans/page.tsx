@@ -2,6 +2,8 @@ import MealPlanCard from "@/components/meal-plans/MealPlanCard";
 import { fetchMealPlans } from "@/api/meal-plans";
 import type { MealPlan } from "@/types/meal-plans";
 
+export const dynamic = "force-dynamic";
+
 type SearchParams = {
   search?: string;
   goal?: string;

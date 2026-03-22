@@ -4,6 +4,8 @@ import { fetchGoalBySlug } from "@/api/goals";
 import { Sparkles, ChevronLeft } from "lucide-react";
 import GoalSanctuaryClient from "@/components/goals/GoalSanctuaryClient";
 
+export const dynamic = "force-dynamic";
+
 export default async function GoalLandingPage({
     params,
 }: {
