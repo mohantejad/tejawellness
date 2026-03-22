@@ -2,6 +2,8 @@ import IngredientCard from "@/components/ingredients/IngredientCard";
 import { fetchIngredients } from "@/api/ingredients";
 import type { Ingredient, IngredientType } from "@/types/ingredients";
 
+export const dynamic = "force-dynamic";
+
 export default async function IngredientsPage({
   searchParams,
 }: {

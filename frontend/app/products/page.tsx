@@ -2,6 +2,8 @@ import ProductFilters from '@/components/products/ProductFilter';
 import ProductListServer from '@/components/products/ProductListServer';
 import { fetchProducts } from '@/api/products';
 
+export const dynamic = "force-dynamic";
+
 type SearchParams = {
   page?: string;
   search?: string;

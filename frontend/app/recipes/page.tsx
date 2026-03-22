@@ -2,6 +2,8 @@ import RecipeFilters from '@/components/recipes/RecipeFilters';
 import RecipeListServer from '@/components/recipes/RecipeListServer';
 import { fetchRecipes } from '@/api/recipes';
 
+export const dynamic = "force-dynamic";
+
 type SearchParams = {
   search?: string;
   min_calories?: string;
