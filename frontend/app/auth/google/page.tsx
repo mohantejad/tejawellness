@@ -7,6 +7,8 @@ import { useAppDispatch } from "@/redux/hooks";
 import { fetchMe } from "@/redux/slices/authSlice";
 import { toast } from "sonner";
 
+export const dynamic = "force-dynamic";
+
 export default function GoogleCallbackPage() {
   const params = useSearchParams();
   const router = useRouter();
