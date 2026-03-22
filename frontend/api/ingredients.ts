@@ -52,6 +52,6 @@ export async function fetchIngredientsByGoal(
   );
 }
 
-export async function fetchIngredient(id: number) {
+export async function fetchIngredientById(id: number) {
   return apiFetch(`/api/ingredients/${id}/`);
 }

@@ -7,7 +7,8 @@ export default function IngredientCard({ ingredient }: { ingredient: Ingredient 
   const typeLabel = ingredient.ingredient_type?.replace(/_/g, ' ') || 'Ingredient';
 
   return (
-    <div
+    <Link
+      href={`/ingredients/${ingredient.id}`}
       className="card-soft group overflow-hidden transition-all duration-500 flex flex-col h-full bg-white shadow-rose border-none"
     >
       <div className="relative h-48 w-full overflow-hidden bg-muted/10">
@@ -70,6 +71,6 @@ export default function IngredientCard({ ingredient }: { ingredient: Ingredient 
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

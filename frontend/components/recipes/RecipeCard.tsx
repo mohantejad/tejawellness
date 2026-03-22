@@ -31,10 +31,11 @@ export default function RecipeCard({ recipe }: { recipe: RecipeCardData }) {
   };
 
   return (
-    <div
-      className="card-soft group overflow-hidden transition-all duration-300 flex flex-col h-full"
+    <Link
+      href={`/recipes/${recipe.id}`}
+      className="card-soft group overflow-hidden transition-all duration-300 flex flex-col h-full bg-white shadow-rose border-none"
     >
-      <div className="relative h-48 w-full overflow-hidden">
+      <div className="relative h-48 w-full overflow-hidden bg-muted/10">
         {image ? (
           <Image
             src={image}
@@ -54,7 +55,7 @@ export default function RecipeCard({ recipe }: { recipe: RecipeCardData }) {
         </div>
       </div>
 
-      <div className="p-5 flex flex-col flex-grow">
+      <div className="p-7 flex flex-col flex-grow">
         <h3 className="text-xl font-serif font-bold text-fg leading-snug group-hover:text-primary transition-colors">
           {recipe.title}
         </h3>
@@ -74,13 +75,13 @@ export default function RecipeCard({ recipe }: { recipe: RecipeCardData }) {
 
           <button
             onClick={onLike}
-            className="flex items-center gap-1.5 hover:scale-110 transition-transform"
+            className="flex items-center gap-1.5 hover:scale-110 transition-transform relative z-10"
           >
             <span className="text-sm">{liked ? "❤️" : "🤍"}</span>
             <span className="text-xs font-bold text-fg">{likes}</span>
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

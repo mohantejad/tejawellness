@@ -16,10 +16,13 @@ const NAV_ITEMS = [
   { label: 'Skin Care', href: '/goals/skin-care', icon: <Sparkles size={14} className="text-primary/60" /> },
   { label: 'Hair Care', href: '/goals/hair-care', icon: <Sparkles size={14} className="text-accent/60" /> },
   { label: 'Ingredients', href: '/ingredients', icon: <BookOpen size={14} className="text-fg/60" /> },
+  { label: 'Products', href: '/products', icon: <Sparkles size={14} className="text-accent/60" /> },
 ];
 
 const MORE_ITEMS = [
   { label: 'Healthy Recipes', href: '/recipes', description: 'Nourishing daily rituals' },
+  { label: 'Articles', href: '/articles', description: 'Expert botanical insights' },
+  { label: 'Meal Plans', href: '/meal-plans', description: 'Guided wellness journeys' },
 ];
 
 export default function Header() {

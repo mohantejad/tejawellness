@@ -36,6 +36,6 @@ export async function fetchMealPlansByGoal(slug: string, filters: {
   return data.results || [];
 }
 
-export async function fetchMealPlan(id: number) {
+export async function fetchMealPlanById(id: number) {
   return apiFetch(`/api/meal-plans/${id}/`);
 }

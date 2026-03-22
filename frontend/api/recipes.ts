@@ -55,7 +55,7 @@ export async function fetchRecipes(filters: {
   return data.results || [];
 }
 
-export async function fetchRecipe(id: number) {
+export async function fetchRecipeById(id: number) {
   return apiFetch(`/api/recipes/${id}/`);
 }
 
