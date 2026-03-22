@@ -160,7 +160,7 @@ export default function RecipeDetailClient({ recipe }: { recipe: Recipe }) {
               {recipe.title}
             </h1>
             <p className="text-xl text-mutedForeground font-serif italic leading-relaxed">
-              "{recipe.description}"
+              &quot;{recipe.description}&quot;
             </p>
           </div>
 

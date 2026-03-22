@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { logout } from '@/redux/slices/authSlice';
 import { globalSearch } from '@/api/search';
-import { ChevronDown, Search, User, Menu, X, Sparkles, ShoppingBag, BookOpen } from 'lucide-react';
+import { ChevronDown, Search, User, Menu, X, Sparkles, BookOpen } from 'lucide-react';
 
 type SearchResult = {
   ingredients: { id: number; name: string; image?: string | null }[];

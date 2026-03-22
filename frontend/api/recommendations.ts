@@ -1,7 +1,7 @@
 import { apiFetch } from "@/api/base";
 
 export type MixedRecommendation = {
-  type: "recipe" | "product" | "meal_plan";
+  type: "recipe" | "product" | "meal_plan" | "ingredient";
   id: number;
   title: string;
   goal: string;

@@ -18,16 +18,12 @@ import {
   Star,
   Clock,
   Sparkles,
-  MessageSquare,
-  Bookmark
+  MessageSquare
 } from "lucide-react";
 import { toast } from "sonner";
 
 export default function ArticleDetailClient({ article }: { article: Article }) {
-  const [likeCount, setLikeCount] = useState<number>(article.like_count ?? 0);
   const [isLiked, setIsLiked] = useState<boolean>(article.is_liked ?? false);
-  const [avgRating, setAvgRating] = useState<number>(article.average_rating ?? 0);
-  const [ratingCount, setRatingCount] = useState<number>(article.rating_count ?? 0);
 
   const [reviews, setReviews] = useState<ArticleReview[]>(article.reviews ?? []);
   const [rating, setRating] = useState<number>(5);
@@ -40,7 +36,7 @@ export default function ArticleDetailClient({ article }: { article: Article }) {
     try {
       const res = await toggleArticleLike(article.id);
       setIsLiked(res.liked);
-      setLikeCount(res.like_count);
+      // setLikeCount(res.like_count); // Removing since unused
       if (res.liked) toast.success("Added to your wisdom collection");
     } catch {
       toast.error("Sign in to save articles");
@@ -58,8 +54,8 @@ export default function ArticleDetailClient({ article }: { article: Article }) {
         return copy;
       });
       const updated = await fetchArticleById(article.id);
-      setAvgRating(updated.average_rating ?? 0);
-      setRatingCount(updated.rating_count ?? 0);
+      // setAvgRating(updated.average_rating ?? 0); // Removing since unused
+      // setRatingCount(updated.rating_count ?? 0); // Removing since unused
       toast.success("Article rated");
     } catch {
       toast.error("You've already rated this article");
@@ -113,7 +109,7 @@ export default function ArticleDetailClient({ article }: { article: Article }) {
               {article.title}
             </h1>
             <p className="text-xl md:text-2xl text-mutedForeground font-serif italic leading-relaxed">
-              "{article.summary}"
+              &quot;{article.summary}&quot;
             </p>
           </div>
 
@@ -210,7 +206,7 @@ export default function ArticleDetailClient({ article }: { article: Article }) {
                       <span className="font-bold text-xs uppercase tracking-widest text-fg">{c.user}</span>
                     </div>
                     <p className="text-lg text-mutedForeground leading-relaxed pl-14 font-serif italic">
-                      "{c.text}"
+                      &quot;{c.text}&quot;
                     </p>
                   </div>
                 ))}

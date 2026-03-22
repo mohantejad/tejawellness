@@ -37,7 +37,7 @@ export default async function HomePage() {
         <div className="max-w-2xl mx-auto space-y-6">
           <h2 className="text-3xl font-serif font-bold text-fg">Modern Rituals. Ancient Wisdom.</h2>
           <p className="text-mutedForeground leading-relaxed italic font-serif">
-            "Your journey to radiant skin and healthy hair begins with the science of nourishment. We curate every ritual with intention, blending botanical research with modern wellness."
+            &quot;Your journey to radiant skin and healthy hair begins with the science of nourishment. We curate every ritual with intention, blending botanical research with modern wellness.&quot;
           </p>
           <div className="flex justify-center">
             <div className="h-0.5 w-12 bg-primary/20 rounded-full" />

@@ -63,7 +63,7 @@ function GoalCard({
           {title}
         </h3>
         <p className="text-sm text-mutedForeground mt-4 h-10 line-clamp-2 leading-relaxed italic font-serif">
-          "{desc}"
+          &quot;{desc}&quot;
         </p>
 
         <div className="mt-6 pt-4 border-t border-border/40 flex items-center justify-between text-[10px] font-bold text-primary uppercase tracking-[0.3em] group-hover:translate-x-1 transition-all duration-500">
@@ -156,7 +156,7 @@ export default function GoalsSection({
               <div className="max-w-3xl space-y-4">
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-fg tracking-tight">{goal.name}</h2>
                 <p className="text-lg text-mutedForeground leading-relaxed font-serif italic max-w-2xl">
-                  "{goal.description}"
+                  &quot;{goal.description}&quot;
                 </p>
               </div>
 

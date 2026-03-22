@@ -14,18 +14,8 @@ export default function RecipeFilters() {
   const [maxCalories, setMaxCalories] = useState(sp.get("max_calories") ?? "");
   const [minProtein, setMinProtein] = useState(sp.get("min_protein") ?? "");
   const [maxProtein, setMaxProtein] = useState(sp.get("max_protein") ?? "");
-  const [minCarbs, setMinCarbs] = useState(sp.get("min_carbs") ?? "");
-  const [maxCarbs, setMaxCarbs] = useState(sp.get("max_carbs") ?? "");
-  const [minFat, setMinFat] = useState(sp.get("min_fat") ?? "");
-  const [maxFat, setMaxFat] = useState(sp.get("max_fat") ?? "");
-  const [minFiber, setMinFiber] = useState(sp.get("min_fiber") ?? "");
-  const [maxFiber, setMaxFiber] = useState(sp.get("max_fiber") ?? "");
-  const [maxPrep, setMaxPrep] = useState(sp.get("max_prep_time") ?? "");
-  const [maxCook, setMaxCook] = useState(sp.get("max_cook_time") ?? "");
-  const [minServings, setMinServings] = useState(sp.get("min_servings") ?? "");
   const [difficulty, setDifficulty] = useState(sp.get("difficulty") ?? "");
   const [dietType, setDietType] = useState(sp.get("diet_type") ?? "");
-  const [mealType, setMealType] = useState(sp.get("meal_type") ?? "");
   const [ordering, setOrdering] = useState(sp.get("ordering") ?? "-created_at");
 
   function apply() {
@@ -35,18 +25,8 @@ export default function RecipeFilters() {
     if (maxCalories) params.set("max_calories", maxCalories);
     if (minProtein) params.set("min_protein", minProtein);
     if (maxProtein) params.set("max_protein", maxProtein);
-    if (minCarbs) params.set("min_carbs", minCarbs);
-    if (maxCarbs) params.set("max_carbs", maxCarbs);
-    if (minFat) params.set("min_fat", minFat);
-    if (maxFat) params.set("max_fat", maxFat);
-    if (minFiber) params.set("min_fiber", minFiber);
-    if (maxFiber) params.set("max_fiber", maxFiber);
-    if (maxPrep) params.set("max_prep_time", maxPrep);
-    if (maxCook) params.set("max_cook_time", maxCook);
-    if (minServings) params.set("min_servings", minServings);
     if (difficulty) params.set("difficulty", difficulty);
     if (dietType) params.set("diet_type", dietType);
-    if (mealType) params.set("meal_type", mealType);
     if (ordering) params.set("ordering", ordering);
     router.push(`?${params.toString()}`);
   }

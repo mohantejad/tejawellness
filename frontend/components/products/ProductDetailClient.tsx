@@ -185,7 +185,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                 <div className="h-px grow bg-border/50" />
                             </div>
                             <p className="text-xl text-mutedForeground font-serif italic leading-relaxed">
-                                "{product.description}"
+                                &quot;{product.description}&quot;
                             </p>
                         </div>
 

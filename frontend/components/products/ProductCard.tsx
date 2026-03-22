@@ -32,7 +32,7 @@ export default function ProductCard({ product }: { product: Product }) {
     }
     const res = await toggleProductLike(product.id);
     setLiked(res.liked);
-    setLikes(res.like_count);
+    // setLikes(res.like_count); // Removing since unused
   };
 
   const rawImage = product.primary_image || product.image_url;

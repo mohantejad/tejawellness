@@ -71,7 +71,7 @@ export default function PersonalizedGate() {
             Welcome back, <span className="text-primary italic">{firstName}</span>. Your bespoke selections are being curated.
           </h2>
           <p className="text-mutedForeground mt-4 text-lg font-serif italic max-w-lg">
-            "Every ritual we design is a step towards your most vibrant self. We're currently tailoring your journey based on your latest preferences."
+            &quot;Every ritual we design is a step towards your most vibrant self. We&apos;re currently tailoring your journey based on your latest preferences.&quot;
           </p>
         </div>
 

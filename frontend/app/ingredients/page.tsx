@@ -1,3 +1,4 @@
+import Link from "next/link";
 import IngredientCard from "@/components/ingredients/IngredientCard";
 import { fetchIngredients } from "@/api/ingredients";
 import type { Ingredient, IngredientType } from "@/types/ingredients";
@@ -88,7 +89,7 @@ export default async function IngredientsPage({
           The Botanical Library
         </h1>
         <p className="text-xl text-mutedForeground font-serif italic leading-relaxed max-w-2xl">
-          "The architectural foundations of radiance. A curated codex of bespoke nutrients designed for cellular resilience and lasting glow."
+          &quot;The architectural foundations of radiance. A curated codex of bespoke nutrients designed for cellular resilience and lasting glow.&quot;
         </p>
       </div>
 
@@ -175,9 +176,9 @@ export default async function IngredientsPage({
               </button>
 
               {Object.keys(await searchParams).length > 0 && (
-                <a href="/ingredients" className="block text-center text-xs font-bold text-mutedForeground hover:text-primary transition uppercase tracking-widest pt-2">
+                <Link href="/ingredients" className="block text-center text-xs font-bold text-mutedForeground hover:text-primary transition uppercase tracking-widest pt-2">
                   Clear All
-                </a>
+                </Link>
               )}
             </form>
           </div>
@@ -187,7 +188,7 @@ export default async function IngredientsPage({
           {items.length === 0 ? (
             <div className="card-soft p-20 text-center text-mutedForeground">
               <p className="text-lg font-serif">We couldn't find any ingredients matching your criteria.</p>
-              <a href="/ingredients" className="text-primary font-bold inline-block mt-4 uppercase tracking-widest text-xs border-b border-primary pb-1">Reset Filters</a>
+              <Link href="/ingredients" className="text-primary font-bold inline-block mt-4 uppercase tracking-widest text-xs border-b border-primary pb-1">Reset Filters</Link>
             </div>
           ) : (
             <>

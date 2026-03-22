@@ -70,7 +70,7 @@ export default function ChatWidget() {
         references,
       };
       setMessages((prev) => [...prev, assistantMessage]);
-    } catch (error) {
+    } catch (_error) {
       setMessages((prev) => [
         ...prev,
         {

@@ -37,7 +37,7 @@ export default async function GoalLandingPage({
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
 
                 <div className="absolute top-12 left-12 z-20">
-                    <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-bold text-fg uppercase tracking-[0.3em] hover:text-primary transition-all group">
+                    <Link href="/goals" className="group flex items-center gap-3 text-sm font-bold uppercase tracking-[0.3em] text-mutedForeground hover:text-fg transition-colors">
                         <div className="h-10 w-10 rounded-full border border-fg/20 flex items-center justify-center bg-white/10 backdrop-blur-md group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all">
                             <ChevronLeft size={16} />
                         </div>
@@ -45,17 +45,13 @@ export default async function GoalLandingPage({
                     </Link>
                 </div>
 
-                <div className="relative z-10 text-center space-y-8 max-w-5xl px-6 pt-20">
-                    <div className="flex items-center justify-center gap-4">
-                        <div className="h-px w-12 bg-primary/40" />
-                        <span className="text-[10px] font-bold text-primary uppercase tracking-[0.5em]">The Sanctuary</span>
-                        <div className="h-px w-12 bg-primary/40" />
-                    </div>
-                    <h1 className="text-7xl md:text-9xl font-serif font-bold text-fg tracking-tighter leading-none">
-                        {title}
+                <div className="max-w-2xl animate-in slide-in-from-bottom-8 duration-700 delay-200">
+                    <p className="text-[10px] font-bold text-primary uppercase tracking-[0.5em] mb-4">Goal Identification</p>
+                    <h1 className="text-6xl md:text-8xl font-serif font-bold text-fg leading-[0.9] tracking-tighter mb-8">
+                        {goal.name}
                     </h1>
-                    <p className="text-xl md:text-2xl text-fg/90 font-serif italic max-w-3xl mx-auto leading-relaxed">
-                        "{description}"
+                    <p className="text-xl md:text-2xl text-mutedForeground font-serif italic leading-relaxed">
+                        &quot;The botanical synergy of science &amp; ritual.&quot;
                     </p>
                 </div>
             </section>

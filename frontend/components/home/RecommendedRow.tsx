@@ -102,7 +102,7 @@ export default function RecommendedRow() {
             {items.map((item) => (
               <Link
                 key={`${item.type}-${item.id}`}
-                href={item.type === "meal_plan" ? `/meal-plans/${item.id}` : `/${item.type}s/${item.id}`}
+                href={item.type === "recipe" ? "/recipes" : item.type === "ingredient" ? "/ingredients" : "/products"}
                 className="card-soft p-8 min-w-[340px] max-w-[340px] hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group/card border-transparent hover:border-border/50 shadow-rose"
               >
                 {/* Subtle Background Pattern */}
